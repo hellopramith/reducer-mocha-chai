@@ -7,7 +7,7 @@ describe('TrelloApp unit testing', function() {
  
   it('should ADD_CARD', function() {
 
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -27,7 +27,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
 
@@ -50,7 +50,7 @@ describe('TrelloApp unit testing', function() {
  
   it('should EDIT_CARD', function () {
 
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -70,7 +70,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
  
@@ -92,7 +92,7 @@ describe('TrelloApp unit testing', function() {
   });
 
   it('should MOVE_CARD', function() {
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -112,7 +112,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
 
@@ -136,7 +136,7 @@ describe('TrelloApp unit testing', function() {
  
   it('should CREATE_LIST', function() {
 
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -156,7 +156,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
 
@@ -175,7 +175,7 @@ describe('TrelloApp unit testing', function() {
   });
 
   it('should EDIT_LIST', function () {
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -195,7 +195,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
 
@@ -215,7 +215,7 @@ describe('TrelloApp unit testing', function() {
   });
  
   it('should EDIT_BOARD', function() {
-    const currState = {
+    const currState = deepFreeze({
       currentBoard: {
         id: 'board1',
         name: 'MyBoard',
@@ -235,7 +235,7 @@ describe('TrelloApp unit testing', function() {
           cards: []
         }]
       }
-    };
+    });
 
     const store = createStore(TrelloApp, currState);
 
